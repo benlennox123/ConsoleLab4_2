@@ -17,10 +17,10 @@ namespace Lab4_1
             do
             {
                 N = Convert.ToInt32(Console.ReadLine());
-                int D = N % 2;
+                int D = Math.Abs(N);
                 if (N != 0)
                 {
-                    if (D == 1)
+                    if (D != N)
                     {
                         count1++;
                     }
@@ -33,17 +33,17 @@ namespace Lab4_1
             while (N != 0);
             if (count1==count2)
             {
-                Console.WriteLine("Количество нечётных чисел {0} равно количеству чётных чисел {1}", count1, count2);
+                Console.WriteLine("Количество отрицательных чисел {0} равно количеству положительных чисел {1}", count1, count2);
             }
             else
             {
                 if (count1 > count2)
                 {
-                    Console.WriteLine("Нечётных чисел {0} больше, чем чётных чисел {1}", count1, count2);
+                    Console.WriteLine("Отрицательных чисел {0} больше, чем положительных чисел {1}", count1, count2);
                 }
                 else
                 {
-                    Console.WriteLine("Чётных чисел {0} больше, чем нечётных чисел {1}", count2, count1);
+                    Console.WriteLine("Положительных чисел {0} больше, чем отрицательных чисел {1}", count2, count1);
                 }
             }
             Console.Write("Для завершения нажмите любую клавишу");
